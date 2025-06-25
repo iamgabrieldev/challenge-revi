@@ -2,8 +2,6 @@
 
 Uma aplicação web moderna para batalhas de monstros desenvolvida em React com TypeScript, criada como parte do desafio técnico da Revi.
 
-![Monster Battle Arena](https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop&crop=center)
-
 ## 📋 Sobre o Projeto
 
 Monster Battle Arena é uma aplicação completa que permite aos usuários criar monstros únicos com diferentes estatísticas e fazê-los batalhar em uma arena virtual. O projeto implementa um algoritmo sofisticado de batalha que considera múltiplos fatores como velocidade, ataque, defesa e pontos de vida para determinar o vencedor.
@@ -27,27 +25,27 @@ Monster Battle Arena é uma aplicação completa que permite aos usuários criar
 ### Instalação
 
 1. **Clone o repositório**
+
    ```bash
-   git clone <url-do-repositorio>
+   git clone git@github.com:iamgabrieldev/challenge-revi.git
    cd monster-battle
    ```
-
 2. **Instale as dependências**
+
    ```bash
    pnpm install
    # ou
    npm install
    ```
-
 3. **Execute o servidor de desenvolvimento**
+
    ```bash
    pnpm run dev
    # ou
    npm run dev
    ```
-
 4. **Acesse a aplicação**
-   
+
    Abra seu navegador e acesse: `http://localhost:5173`
 
 ### Scripts Disponíveis
@@ -90,21 +88,25 @@ Monster Battle Arena é uma aplicação completa que permite aos usuários criar
 O sistema de batalha segue regras específicas para garantir combates equilibrados e estratégicos:
 
 ### Ordem de Ataque
+
 1. **Velocidade**: O monstro com maior velocidade ataca primeiro
 2. **Empate**: Se as velocidades forem iguais, o monstro com maior ataque vai primeiro
 
 ### Cálculo de Dano
+
 ```
 Dano = Ataque do Atacante - Defesa do Defensor
 Dano Mínimo = 1 (sempre causa pelo menos 1 de dano)
 ```
 
 ### Aplicação de Dano
+
 ```
 HP Atual = HP Atual - Dano Calculado
 ```
 
 ### Condição de Vitória
+
 - A batalha continua em rounds alternados
 - O primeiro monstro a ter seu HP reduzido a zero perde
 - O monstro sobrevivente é declarado vencedor
@@ -115,13 +117,13 @@ HP Atual = HP Atual - Dano Calculado
 **Monstro B**: Lobo Sombrio (ATK: 75, DEF: 45, SPD: 95, HP: 80)
 
 1. **Round 1**: Lobo Sombrio ataca primeiro (SPD 95 > 70)
+
    - Dano: 75 - 60 = 15
    - HP do Dragão: 120 → 105
-
 2. **Round 2**: Dragão de Fogo contra-ataca
+
    - Dano: 85 - 45 = 40
    - HP do Lobo: 80 → 40
-
 3. **Batalha continua** até um dos monstros ser derrotado...
 
 ## 🏗️ Arquitetura Técnica
@@ -278,4 +280,3 @@ Este projeto é desenvolvido para fins educacionais e de avaliação técnica.
 **Desenvolvido com ❤️ para o Desafio Técnico Revi**
 
 *Demonstrando habilidades em React, TypeScript, Design de Interface e Arquitetura de Software*
-
